@@ -11,25 +11,13 @@ body {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   padding: 0.5rem;
   gap: 0.5rem;
   border-bottom: solid 1px rgb(235, 148, 148);
   background-color: rgb(184, 37, 37);
-}
-
-/* Make ul inside nav a flex container to layout list items horizontally */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 0.5rem;
-}
-
-nav li {
-  margin: 0;
-  padding: 0;
 }
 
 nav a {
@@ -39,15 +27,13 @@ nav a {
   border-radius: 0.2rem;
   border: solid 1px rgb(190, 54, 54);
   text-align: center;
-  text-decoration: none;   /* fixed property */
+  text-decoration: none;
   color: rgb(179, 88, 88);
-  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect on nav links */
-nav a:hover {
-  background-color: rgb(179, 88, 88);
-  color: rgb(129, 71, 71);
+nav a[aria-current='page'] {
+  color: rgb(179, 88, 88);
+  background-color: #e9d7d7;
 }
 
 main {
@@ -58,4 +44,20 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+li a {
+display: block;
+color: rgb(231, 216, 216);
+padding: 8px 16px;
+text decoration: none;
 
+li a:hover {
+  background-color: rgb(179, 88, 88);
+  color:rgb(129, 71, 71);
+}
